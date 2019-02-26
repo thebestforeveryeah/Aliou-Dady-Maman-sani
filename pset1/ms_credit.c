@@ -3,18 +3,14 @@
 
 int main(void)
 {
-    // Declare and initialize a variable and ask for user input.
-    long long cardnumber = 0;
-
-    // Ask for credit card number
+    long long cardnumber;
 
     do
-    {printf("What is your card number? ");
+    {printf("your card number: ");
     cardnumber = get_long_long(" ");
     }
     while (cardnumber < 0);
 
-    // Determine whether it has a valid number of digits
     int count = 0;
     long long digits = cardnumber;
     while (digits > 0)
@@ -58,7 +54,7 @@ int main(void)
       }
       if (originalnumber[12] == 4 && v % 10 == 0)
       {
-        printf("VISA\n");
+        printf("carte valide\n");
       }
       else
       {
@@ -74,7 +70,7 @@ int main(void)
       }
       if (originalnumber[14] == 3 && v % 10 == 0 && (originalnumber[13] == 4 || originalnumber[13] == 7))
       {
-        printf("AMEX\n");
+        printf("carte valide\n");
       }
       else
       {
@@ -90,11 +86,11 @@ int main(void)
       }
       if (originalnumber[15] == 4 && v % 10 == 0)
       {
-        printf("VISA\n");
+        printf("carte valide\n");
       }
       else if (originalnumber[15] == 5 && v % 10 == 0 && (originalnumber[14] == 1 || originalnumber[14] == 2 || originalnumber[14] == 3 || originalnumber[14] == 4 || originalnumber[14] == 5))
         {
-            printf("MASTERCARD\n");
+            printf("carte valide\n");
         }
       else
       {
